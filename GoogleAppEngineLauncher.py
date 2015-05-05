@@ -25,12 +25,13 @@ except ImportError, inst:
   print >>sys.stderr, 'wxPython is not available'
   sys.exit(1)
 
-REQUIRED_WX_VERSION = (2,8)
-CURRENT_WX_VERSION = wx.VERSION[:2]
-if CURRENT_WX_VERSION != REQUIRED_WX_VERSION:
-  print >>sys.stderr, ('wxPython version incorrect; is %d.%d, must be %d.%d' %
-                       (CURRENT_WX_VERSION + REQUIRED_WX_VERSION))
-  sys.exit(2)
+# temporary deactivate - should be minimum version instead of exact version match (<gunter@grodotzki.co.za>)
+#REQUIRED_WX_VERSION = (2,8)
+#CURRENT_WX_VERSION = wx.VERSION[:2]
+#if CURRENT_WX_VERSION != REQUIRED_WX_VERSION:
+#  print >>sys.stderr, ('wxPython version incorrect; is %d.%d, must be %d.%d' %
+#                       (CURRENT_WX_VERSION + REQUIRED_WX_VERSION))
+#  sys.exit(2)
 
 import launcher
 
